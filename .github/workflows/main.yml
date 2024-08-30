@@ -44,8 +44,8 @@ jobs:
           password: ${{ secrets.OVH_SERVER_PASSWORD }}
           port: ${{ secrets.OVH_SERVER_PORT }}
           script: |
-            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-            docker pull oussama020899/serviceconfiguration:latest
-            docker stop serviceconfiguration || true
-            docker rm serviceconfiguration || true
-            docker run -d --name serviceconfiguration -p 3080:3080 oussama020899/serviceconfiguration:latest
+           sudo docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+           sudo docker pull oussama020899/serviceconfiguration:latest
+           sudo docker stop serviceconfiguration || true
+           sudo docker rm serviceconfiguration || true
+           sudo docker run -d --name serviceconfiguration -p 3080:3080 oussama020899/serviceconfiguration:latest
