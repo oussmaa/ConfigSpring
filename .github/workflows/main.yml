@@ -48,4 +48,4 @@ jobs:
            sudo docker pull oussama020899/serviceconfiguration:latest
            sudo docker stop serviceconfiguration || true
            sudo docker rm serviceconfiguration || true
-           sudo docker run -d --name serviceconfiguration -p 3080:3080 oussama020899/serviceconfiguration:latest
+           sudo docker run -d --name serviceconfiguration -p 9091:9091 oussama020899/serviceconfiguration:latest
